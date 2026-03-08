@@ -61,3 +61,44 @@ Statuswerte im Workflow:
 
 ### 9. Handler Klasse (Actions)
 ![Handler Actions](screenshots/09_handler_actions.png)
+
+## Projektstruktur
+
+Der Quellcode der Anwendung ist in folgende Bereiche unterteilt:
+
+- **tables/** – Datenbanktabellen für Leave Requests und Value Help
+- **cds/** – CDS Views für Datenmodellierung und Projektion
+- **behavior/** – Behavior Definition für RAP Business Object
+- **handler/** – Implementierung der Business Logik (Actions, Validations, Determinations)
+- **screenshots/** – Screenshots der Fiori Anwendung
+
+  ## Architektur der Anwendung
+
+Die Anwendung basiert auf dem **SAP RESTful Application Programming Model (RAP)** und folgt einer klaren Schichtenstruktur:
+
+1. **Datenbanktabellen**
+   - Persistente Tabellen für Urlaubsanträge und Value Help Daten
+
+2. **CDS Views**
+   - Interface View zur Datenmodellierung
+   - Projection View für die Bereitstellung an die UI
+   - Value Help CDS für die Leave-Type-Auswahl
+
+3. **Behavior Definition**
+   - Definition des RAP Business Objects
+   - Festlegung von Create, Update, Delete sowie Actions
+
+4. **Handler Klasse**
+   - Implementierung der Geschäftslogik
+   - Determinations, Validations, Actions und Feature Control
+
+5. **Service Definition & Service Binding**
+   - Bereitstellung der Anwendung als **OData V4 Service**
+
+6. **Fiori Elements UI**
+   - List Report und Object Page
+   - Value Help, Workflow-Aktionen und Statussteuerung
+
+### Prozessfluss
+
+**Tabelle → CDS Views → Behavior Definition → Handler Klasse → OData V4 → Fiori Elements UI**
