@@ -36,28 +36,28 @@ Statuswerte im Workflow:
 ## Screenshots
 
 ### 1. Listenansicht der Anwendung
-![List Page](screenshots/01_list_page.png)
+![List Page](01_list_page.png)
 
 ### 2. Erstellung eines neuen Urlaubsantrags
-![Create Form](screenshots/02_create_form.png)
+![Create Form](02_create_form.png)
 
 ### 3. Value Help für Leave Type
-![Value Help](screenshots/03_value_help.png)
+![Value Help](03_value_help.png)
 
 ### 4. Antrag nach dem Submit
-![Submitted](screenshots/04_submitted_status.png)
+![Submitted](04_submitted_status.png)
 
 ### 5. Genehmigter Antrag
-![Approved](screenshots/05_approved_status.png)
+![Approved](05_approved_status.png)
 
 ### 6. Feature Control (Aktivierte/Deaktivierte Aktionen)
-![Feature Control](screenshots/06_feature_control.png)
+![Feature Control](06_feature_control.png)
 
 ### 7. Behavior Definition (RAP)
-![Behavior Definition](screenshots/07_behavior_definition.png)
+![Behavior Definition](07_behavior_definition.png)
 
 ### 8. CDS Projection View
-![CDS View](screenshots/08_cds_view.png)
+![CDS View](08_cds_view.png)
 
 ### 9. Handler Klasse (Actions)
-![Handler Actions](screenshots/09_handler_actions.png)
+![Handler Actions](09_handler_actions.png)
