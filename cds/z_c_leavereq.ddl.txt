@@ -1,5 +1,5 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Leave Request – Consumption View'
+@EndUserText.label: 'Leave Request â€“ Consumption View'
 
 @UI.headerInfo: {
   typeName: 'Leave Request',
