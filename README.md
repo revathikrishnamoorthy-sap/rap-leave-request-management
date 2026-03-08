@@ -1,7 +1,7 @@
 # SAP RAP Urlaubsantragsverwaltung
 
 **Entwickelt von: Revathi Krishnamoorthy**
-GitHub: https://github.com/revathikrishnamoorthy-sap/sap-rap-leave-request-management
+GitHub: [https://github.com/revathikrishnamoorthy-sap/sap-rap-leave-request-management](https://github.com/revathikrishnamoorthy-sap/rap-leave-request-management/tree/main)
 
 Dieses Projekt demonstriert eine **RAP-basierte SAP Anwendung** zur Verwaltung von Urlaubsanträgen mit **ABAP Cloud und Fiori Elements**.
 
