@@ -1,0 +1,60 @@
+managed implementation in class zbp_i_leavereq unique;
+with draft;
+define behavior for Z_I_LeaveReq alias LeaveReq
+persistent table zrev_lv_req
+draft table zrev_lv_req_d
+lock master total etag total_changed_at
+etag master changed_at
+
+{
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare
+  {
+    validation validateDates;
+  }
+
+
+  field ( numbering : managed, readonly ) request_id;
+
+  field ( mandatory ) emp_id, leave_type, date_from, date_to;
+
+  field ( readonly ) created_at, created_by, changed_at, changed_by;
+
+  field ( readonly ) status;
+  field ( readonly ) leave_days;
+
+  determination setInitialStatus on modify { create; }
+  determination calculateLeaveDays on modify { field date_from; field date_to; }
+
+  validation validateDates on save { field date_from; field date_to; }
+
+  action ( features : instance ) submit  result [1] $self;
+  action ( features : instance ) approve result [1] $self;
+  action ( features : instance ) reject  result [1] $self;
+
+
+  mapping for zrev_lv_req
+  {
+    request_id  = request_id;
+    emp_id      = emp_id;
+    leave_type  = leave_type;
+    date_from   = date_from;
+    date_to     = date_to;
+    leave_days  = leave_days;
+    status      = status;
+    reason      = reason;
+    created_at  = created_at;
+    created_by  = created_by;
+    changed_at  = changed_at;
+    changed_by  = changed_by;
+    total_changed_at = total_changed_at;
+  }
+}
+

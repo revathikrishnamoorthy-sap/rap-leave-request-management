@@ -1,0 +1,9 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Leave Type Value Help'
+define view entity Z_I_LeaveType
+  as select from zrev_leave_type
+{
+  key leave_type,
+      description
+}
+

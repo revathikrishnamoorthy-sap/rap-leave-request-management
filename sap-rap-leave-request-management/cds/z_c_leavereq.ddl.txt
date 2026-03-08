@@ -1,0 +1,58 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Leave Request – Consumption View'
+
+@UI.headerInfo: {
+  typeName: 'Leave Request',
+  typeNamePlural: 'Leave Requests',
+  title: { value: 'request_id' }
+}
+@Metadata.allowExtensions: true
+
+define root view entity Z_C_LeaveReq 
+  provider contract transactional_query
+      as projection on Z_I_LeaveReq
+{
+     @EndUserText.label: 'UUID'
+     @UI.lineItem: [{ position: 10 }]
+     @UI.selectionField: [{ position: 10 }]
+     key request_id,
+  
+     @EndUserText.label: 'Employee ID'
+     @UI.lineItem: [{ position: 20 }]
+     @UI.selectionField: [{ position: 20 }]
+     emp_id,
+      
+      @EndUserText.label: 'Leave Type'
+      @UI.lineItem: [{ position: 30 }]
+      @Consumption.valueHelpDefinition: [
+        { entity: { name: 'Z_I_LeaveType', element: 'leave_type' } }
+      ]
+      leave_type,
+      
+      @EndUserText.label: 'Date From'
+      @UI.lineItem: [{ position: 40 }]
+      date_from,
+      
+      @EndUserText.label: 'Date To'
+      @UI.lineItem: [{ position: 50 }]
+      date_to,
+      
+      @EndUserText.label: 'Leave Days'
+      @UI.lineItem: [{ position: 55 }]
+      leave_days,
+      
+      @EndUserText.label: 'Status'
+      @UI.lineItem: [{ position: 60 }]
+      status,
+      
+      @EndUserText.label: 'Reason'
+      @UI.lineItem: [{ position: 70 }]
+      reason,
+      
+      created_at,
+      created_by,
+      changed_at,
+      changed_by,
+   total_changed_at
+}
+
